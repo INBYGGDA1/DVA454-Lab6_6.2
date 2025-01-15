@@ -1,0 +1,24 @@
+\section{Results}
+\label{section:results}
+
+The solution for this Producer/Consumer assignment when introducing a random number of Producers and Consumers uses the same basic design and code as Assignment 2 (4.2), except that that at the beginning, a random number of Producer and Consumer tasks are created.
+
+\subsection{Identify and describe the problems you found in the Producer/Consumer assignment when introducing a random number of Producers and Consumers.}
+The solution was tested and the following potential issues were not able to be found to occur:
+\begin{enumerate}
+    \item Synchronization Issues (race conditions)
+    \item Deadlocks (all consumers and producers getting blocked)
+    \item Buffer Overflows and Underflows (consumer trying to receive from empty buffer or producer trying to produce and put into full buffer)
+    \item Starvation (some producers and consumers blocking indefinitely)
+\end{enumerate}
+
+However the following potential issues might exist:
+\begin{enumerate}
+    \item Fairness
+    \item Performance
+    \item Resource management
+\end{enumerate}
+The system does not cause starvation however it is not ensured that it is fair for all producers and consumers. Some producers and consumers might get to run more often than others and thus fairness issues might exist. Performance and resource management can always be improved to more efficiently use the hardware and resources available.
+
+\subsection{Describe how you fixed the Producer/Consumer problems found.}
+The issues found of potential unfairness, performance and resource management is seen as being out of scope and was not considered sufficiently large issue for any alterations to the solution and code. These are considered out of scope and won't be fixed since it would increase the complexity considerably and the program runs as it should and meets the functional requirements. These issues are therefor seen as optimization rather than problems.
